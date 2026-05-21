@@ -5,8 +5,6 @@ services:
   - type: web
     runtime: static
     name: teplodim
-    plan: free
-    rootDir: .            # якщо проєкт у корені репо
     buildCommand: npm install && npm run build
     staticPublishPath: dist
 
@@ -19,7 +17,7 @@ services:
 
     envVars:
       - key: VITE_SUPABASE_URL
-        sync: false       # значення додасте в Render UI, у репо не комітимо
+        sync: false       # значення задасте в Render UI, у репо не комітимо
       - key: VITE_SUPABASE_ANON_KEY
         sync: false
 
